@@ -1,0 +1,48 @@
+{
+  "name": "narrately-api",
+  "version": "1.0.0",
+  "description": "Narrately text to speech using google wavenet api ",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon bin/www",
+    "start": "node bin/www",
+    "build:final": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "db-migrate": "node_modules/.bin/sequelize db:migrate"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^0.5.1",
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^6.2.0",
+    "elasticemail": "^0.2.0",
+    "express": "^4.16.4",
+    "handlebars": "^4.1.1",
+    "http-errors": "^1.7.2",
+    "jsonwebtoken": "^8.4.0",
+    "mkdirp": "^0.5.1",
+    "mkdirp-promise": "^5.0.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "nodemailer": "^6.0.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "pg": "^7.8.0",
+    "pg-hstore": "^2.3.2",
+    "rimraf": "^2.6.3",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0"
+  }
+}
